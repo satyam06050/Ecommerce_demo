@@ -1,16 +1,16 @@
 import 'package:ecommerce_demo/firebase_options.dart';
-import 'package:ecommerce_demo/screens/auth_ui/sighUp.dart';
+
 import 'package:ecommerce_demo/screens/auth_ui/WelcomeScreen.dart';
-import 'package:ecommerce_demo/screens/user_panel/mainScreen.dart';
+
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  print("Firebase Initializes !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+  // print("Firebase Initializes !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   runApp(const MyApp());
 }
 

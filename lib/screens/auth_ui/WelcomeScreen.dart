@@ -1,12 +1,17 @@
+import 'package:ecommerce_demo/controllers/google_signin-controller.dart';
 import 'package:ecommerce_demo/screens/auth_ui/sighUp.dart';
 import 'package:ecommerce_demo/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:lottie/lottie.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  WelcomeScreen({super.key});
+  final GoogleSigninController _googleSigninController = Get.put(
+    GoogleSigninController(),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +51,9 @@ class WelcomeScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: TextButton.icon(
-                onPressed: () {},
+                onPressed: () async {
+                  // _googleSigninController.signInWithGoogle();
+                },
                 label: Text(
                   "Sign in with google",
                   style: TextStyle(color: Colors.white, fontSize: 16),
